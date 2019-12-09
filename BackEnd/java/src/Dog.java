@@ -1,8 +1,11 @@
 
-public class Dog extends Animal {
-  
-	Dog(String n){
-		super(n);
-		
-	}
+public class Dog {
+String name;
+
+public Dog(){
+	
+}
+ public Dog(String name){
+	this.name=name;
+}
 }

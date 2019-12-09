@@ -1,9 +1,21 @@
 
 public class TestAnimal {
 public static void main(String[] args) {
-	Dog d1=new Dog("pinky");
-	System.out.println(d1.name);
-	Animal a1=new Dog("jimmy");
-	System.out.println(a1.name);
+	Animal a=new Animal();
+	a.eat();
+	
+	Lion l=new Lion();
+	l.eat();
+	
+	Cat c=new Cat();
+	c.eat();
+	
+	Animal l1=new Lion();//check the conditions
+	
+	
+	l1.eat();
+	
+
+
 }
 }

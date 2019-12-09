@@ -1,15 +1,14 @@
 package exceptionPropagation;
 
 public class A {
-	public static void main(String[] args) {
+	static void o() {
 		try {
-		B.m();
-		System.out.println("executed");
+		B.n();
+		
 	}
-		catch(ClassNotFoundException e) {
-			System.out.println("exception handled in A class");//ececuted becoz class name is not defined with correct package.
+		catch(ArithmeticException a2) {
+			System.out.println("A class "+a2.getMessage());
 		}
 
 }
 }
-

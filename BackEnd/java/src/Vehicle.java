@@ -1,7 +1,15 @@
 
-public abstract class Vehicle {
-void start() {
-	System.out.println("Starting Vehicle");
+public class Vehicle implements Cloneable {
+	
+String name;
+
+Vehicle(String name){
+	super();//not mandotary
+	
+	this.name=name;
 }
-  abstract void stop();
+@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
 }
