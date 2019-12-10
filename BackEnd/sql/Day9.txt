@@ -1,0 +1,51 @@
+SQL> create table my_info(myid int(10) not null,
+  2  myname varchar(25) default null,
+  3  myjob varchar(25) default null,
+  4  primary key(myid));
+create table my_info(myid int(10) not null,
+                             *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  create table my_info(myid number(10) not null,
+  2  myname varchar(25) default null,
+  3  myjob varchar(25) default null,
+  4* primary key(myid))
+SQL> /
+
+Table created.
+
+SQL> insert into my_info values(559,'mammu','sw');
+
+1 row created.
+
+SQL> insert into my_info values(558,'kavi','sw');
+
+1 row created.
+
+SQL> insert into my_info values(557,'jyo','sw');
+
+1 row created.
+
+SQL> insert into my_info values(556,'nani','sw');
+
+1 row created.
+
+SQL> select * from my_info;
+
+      MYID MYNAME                    MYJOB                                      
+---------- ------------------------- -------------------------                  
+       559 mammu                     sw                                         
+       558 kavi                      sw                                         
+       557 jyo                       sw                                         
+       556 nani                      sw                                         
+
+
+
+SQL>  ALTER TABLE users_info
+    -> ADD address varchar(25) default null;// to add new column
+SQL> spool off
