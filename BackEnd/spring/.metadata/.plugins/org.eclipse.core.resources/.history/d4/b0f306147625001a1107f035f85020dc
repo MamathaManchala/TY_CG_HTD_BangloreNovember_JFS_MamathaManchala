@@ -1,0 +1,5 @@
+package com.cpg.empspringmvc.config;
+
+public class ORMConfig {
+
+}

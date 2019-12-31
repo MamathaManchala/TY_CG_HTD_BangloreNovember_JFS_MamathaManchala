@@ -1,0 +1,13 @@
+package com.capgemini.mywebapp.services;
+
+import com.capgemini.mywebapp.bean.EmployeeInfoBean;
+
+public interface EmployeeService {
+
+	public EmployeeInfoBean searchEmployee(int empId);
+
+
+
+	
+	
+}//End of Class

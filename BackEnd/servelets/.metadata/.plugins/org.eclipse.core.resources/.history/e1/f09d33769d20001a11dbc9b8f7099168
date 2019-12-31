@@ -1,0 +1,83 @@
+package com.capgemini.mywebapp.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.capgemini.mywebapp.bean.EmployeeInfoBean;
+
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	
+	private EntityManagerFactory entityManagerFactory= Persistence.createEntityManagerFactory("employeepersistenceunit");
+	
+
+	@Override
+	public EmployeeInfoBean searchEmployee(int empId) {
+		EntityManager manager = entityManagerFactory.createEntityManager();
+		EmployeeInfoBean employeeInfoBean= manager.find(EmployeeInfoBean.class, empId);
+		manager.close();
+		
+		return employeeInfoBean;
+	}//End of search
+
+
+		
+		@Override
+		public EmployeeInfoBean authenticate(int empId, String password) {
+			EntityManager manager = entityManagerFactory.createEntityManager();
+			String jpql = "from EmployeeInfoBean where empId=:empId and password=:pwd";
+			Query query = manager.createQuery(jpql);
+			query.setParameter("empId", empId);
+			query.setParameter("pwd", password);
+			query.getSingleResult();
+			EmployeeInfoBean employeeInfoBean = null;
+			try {
+				employeeInfoBean = (EmployeeInfoBean) query.getSingleResult();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			return employeeInfoBean;
+		}//End of authenticate()
+
+
+
+		@Override
+		public boolean deleteEmployee(int empId) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+
+
+		@Override
+		public boolean addEmployee(EmployeeInfoBean employeeInfoBean) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+
+
+		@Override
+		public boolean updateEmployee(EmployeeInfoBean employeeInfoBean) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+
+
+		@Override
+		public List<EmployeeInfoBean> getAllEmployees() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	}//End of the class
+
+
+	
+
+	
+

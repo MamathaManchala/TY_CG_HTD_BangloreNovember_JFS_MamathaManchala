@@ -1,0 +1,14 @@
+package com.cpg.springmvc.controller;
+
+import org.springframework.asm.ModuleVisitor;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class SpringController {
+
+	public String Hello(ModelMap map) {
+		@RequestMapping("/hello")
+		map.addAllAttributes("msg","hello mammu........!!!!!!");
+		return "index";
+	}
+}

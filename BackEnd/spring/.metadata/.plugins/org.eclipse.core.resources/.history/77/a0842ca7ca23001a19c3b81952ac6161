@@ -1,0 +1,21 @@
+package com.cpg.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+
+public class SpringController {
+	@RequestMapping("/hello")
+	public String hello(ModelMap map) {
+		
+		map.addAttribute("msg","hello mammu........!!!!!!");
+		return "index";
+	}
+	
+	public String query(@RequestParam("name")String name, @RequestParam("age")int age,ModelMap map) {
+		return "query";
+	}
+}

@@ -1,0 +1,45 @@
+package com.capgemini.empspringboot.service;
+
+import java.util.List;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.empspringboot.dto.EmployeeBean;
+import com.capgemini.empspringboot.repository.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeServices {
+	
+	private EmployeeRepository repository;
+	private BCryptPasswordEncoder encoder= new BCryptPasswordEncoder();
+
+	@Override
+	public EmployeeBean auth(String email, String password) {
+		return null;
+	}
+
+	@Override
+	public boolean register(EmployeeBean bean) {
+		bean.setPassword(encoder.encode(bean.getPassword()));
+		repository.save(bean);
+		return true;
+	}
+
+	@Override
+	public List<EmployeeBean> getEmployees(String Key) {
+		return null;
+	}
+
+	@Override
+	public boolean changePassword(int id, String password) {
+		return false;
+	}
+
+	@Override
+	public boolean deleteEmployee(int id) {
+		repository.deleteById(id);
+		return true;
+	}
+
+}

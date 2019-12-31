@@ -1,0 +1,50 @@
+package com.cpg.springrest.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cpg.springrest.dto.EmployeeBean;
+import com.cpg.springrest.service.EmployeeServices;
+
+@RestController
+public class EmployeeController {
+	
+	@Autowired
+	private EmployeeServices service;
+	
+	@PostMapping(path="/auth", produces = MediaType.APPLICATION_JSON_VALUE)
+	public EmployeeBean auth(String email, String password) {
+		return service.auth(email, password);
+	}
+	@PostMapping("/register")
+	public boolean register(EmployeeBean bean) {
+		return service.register(bean);
+	}
+	@GetMapping("/get")
+	public List<EmployeeBean> searchEmployee(String key){
+		return service.getEmployees(key);
+	}
+	
+	@PostMapping("/changepassword")
+	public boolean changePassword(int id,String password) {
+		return service.changePassword(id, password);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,8 @@
+package com.capgemini.mywebapp.dao;
+
+public interface EmployeeDao {
+	
+public EmployeeInfoBean searchEmployee(int empId);
+
+	
+}//End of Class

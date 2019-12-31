@@ -1,0 +1,24 @@
+package com.capgemini.mywebapp.servelets;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+
+	private EmployeeServices service = new EmployeeServiceImpl();
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException{
+		//Get the Form data
+		
+		String empIdVal = req.getParameter("empId");
+		String password = req.getParameter("password");
+		
+		int empId =Integer.parseInt(empIdVal);
+	}
+	
+	
+	
+}

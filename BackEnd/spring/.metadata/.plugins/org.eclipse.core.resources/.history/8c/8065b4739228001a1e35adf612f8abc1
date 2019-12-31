@@ -1,0 +1,17 @@
+package com.capgemini.empspringboot.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.capgemini.empspringboot.dto.EmployeeBean;
+
+public interface EmployeeRepository extends JpaRepository<EmployeeBean, Integer>{
+
+	public EmployeeBean auth(String email, String password) {
+	}
+
+public boolean register(EmployeeBean bean) {
+	bean.setPassword(encoder.encode(bean.getPassword()));
+	repository.save(bean);
+	return true;
+}
+}

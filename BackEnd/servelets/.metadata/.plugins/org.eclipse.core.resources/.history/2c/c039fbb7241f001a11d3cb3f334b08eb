@@ -1,0 +1,13 @@
+package com.capgemini.mywebapp.bean;
+
+
+@Data
+@Entity
+public class EmployeeInfoBean {
+	private int empId;
+	private String name;
+	private double salary;
+	private int age;
+	private String password;
+	private String designation;
+}//End of class

@@ -1,0 +1,10 @@
+package com.capgemini.springcore.overriding;
+
+public class SuperClass {
+	
+	protected Vector<Object> method(){
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<fieldset>
+		<legend>add Employee</legend>
+		<form action="./addEmployee" method="post">
+			Employee ID : <input type="number" name="empId" required><br>
+			<input type="submit" value="delete">
+
+
+		</form>
+
+
+
+	</fieldset>
+
+</body>
+</html>

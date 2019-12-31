@@ -1,0 +1,48 @@
+package com.cpg.empspringmvc.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.cpg.empspringmvc.bean.EmployeeBean;
+import com.cpg.empspringmvc.services.EmployeeServices;
+
+@Controller
+public class EmployeeController {
+
+	@Autowired
+	private EmployeeServices service;
+
+	@GetMapping("/login")
+	public String login() {
+		return "login";
+	}
+	@PostMapping("/login")
+	public String login(String email,String password,ModelMap map) {
+		EmployeeBean bean=service.auth(email, password);
+		if(bean==null) {
+			map.addAttribute("msg","Invalid Credentials");
+			return "login";
+		}
+		return "home";
+	}
+
+	@GetMapping("/register")
+	public String form() {
+		return "register";
+	}
+
+	@PostMapping("/register")
+	public String form(EmployeeBean bean,ModelMap map) {	
+
+		map.addAttribute("name",bean.getName());
+		map.addAttribute("email",bean.getEmail());
+		map.addAttribute("password",bean.getPassword());
+		map.addAttribute("gender",bean.getId());
+
+		return "register";
+	}
+
+}

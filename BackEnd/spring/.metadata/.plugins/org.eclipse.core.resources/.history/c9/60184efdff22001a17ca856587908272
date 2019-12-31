@@ -1,0 +1,5 @@
+package com.capgemini.springcore.overriding;
+
+public class SubClass extends SuperClass {
+
+}

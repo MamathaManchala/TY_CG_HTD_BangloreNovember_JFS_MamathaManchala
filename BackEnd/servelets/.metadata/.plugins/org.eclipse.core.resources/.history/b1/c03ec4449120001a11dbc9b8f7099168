@@ -1,0 +1,9 @@
+package com.capgemini.mywebapp.servelets;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/serachEmployee2")
+public class SearchEmployeeServlet2 extends HttpServlet {
+
+}

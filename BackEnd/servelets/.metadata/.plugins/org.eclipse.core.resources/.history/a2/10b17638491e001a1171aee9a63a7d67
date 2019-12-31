@@ -1,0 +1,7 @@
+package com.capgemini.mywebapp.servelets;
+
+import javax.servlet.http.HttpServlet;
+
+public class DateServelet extends HttpServlet {
+
+}// End of class

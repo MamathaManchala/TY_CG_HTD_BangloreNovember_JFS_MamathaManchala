@@ -1,0 +1,11 @@
+package com.cpg.springmvc.controller;
+
+import org.springframework.asm.ModuleVisitor;
+import org.springframework.ui.ModelMap;
+
+public class SpringController {
+
+	public String Hello(ModelMap map) {
+		map.addAllAttributes("msg","hello mammu!!!!!!")
+	}
+}

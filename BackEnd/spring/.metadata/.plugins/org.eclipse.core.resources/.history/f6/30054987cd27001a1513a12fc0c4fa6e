@@ -1,0 +1,5 @@
+package com.cpg.springrest.exception;
+
+public class EmployeeException {
+
+}

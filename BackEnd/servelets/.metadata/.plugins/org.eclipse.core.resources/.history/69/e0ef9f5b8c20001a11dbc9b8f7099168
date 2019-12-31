@@ -1,0 +1,5 @@
+package com.capgemini.mywebapp.servelets;
+
+public class RedirectServlet {
+
+}

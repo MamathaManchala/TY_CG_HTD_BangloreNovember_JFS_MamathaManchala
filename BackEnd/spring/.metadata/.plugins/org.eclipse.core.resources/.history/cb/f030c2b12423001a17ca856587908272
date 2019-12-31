@@ -1,0 +1,25 @@
+package com.capgemini.springcore.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+
+import com.capgemini.springcore.beans.Cat;
+import com.capgemini.springcore.beans.Pet;
+
+public class BeanBookConfig {
+
+	
+	@Bean("java")
+	@Primary
+	public Java getJava() {
+		return new Cat();
+		
+	}
+	
+	@Bean("sql")
+	public Sql getSql() {
+		Book book= new Book();
+		pet.setName("quiriessssssssss");
+		//pet.setAnimal(getDog());//autowired
+		return pet;
+}

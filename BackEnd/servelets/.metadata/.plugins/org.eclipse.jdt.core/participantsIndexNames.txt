@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\Users\yasas\OneDrive\Desktop\servelets spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1529537237.index
+\mywebapp\src\main\resources

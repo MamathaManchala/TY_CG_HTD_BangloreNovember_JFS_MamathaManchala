@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<fieldset>
+		<legend>add Employee</legend>
+		<form action="./addEmployee" method="post">
+		<table>
+		<tr>
+		<td>Employee ID</td>
+		<td> : </td>
+		<td><	<input type="number" name="empId" required>
+		</tr>
+		
+		<tr>
+		<td>Employee name</td>
+		<td> : </td>
+		<td><	<input type="number" name="empId" required>
+		</tr>
+		
+		<tr>
+		<td>salary</td>
+		<td> : </td>
+		<td><	<input type="number" name="empId" required>
+		</tr>
+		
+		<tr>
+		<td>Designation</td>
+		<td> : </td>
+		<td><	<input type="number" name="empId" required>
+		</tr>
+		
+		<tr>
+		<td>Password</td>
+		<td> : </td>
+		<td><	<input type="number" name="empId" required>
+		</tr>
+		
+		<tr>
+		<td colspan="3" align="center"><br>
+		<input type="submit" value="Add">
+		</td>
+		</tr>
+		
+		</table>
+		
+			
+
+
+		</form>
+
+
+
+	</fieldset>
+
+</body>
+</html>

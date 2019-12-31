@@ -1,0 +1,9 @@
+package com.capgemini.mywebapp.servletsforjsps;
+
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/addEmployee1")
+
+public class AddEmpServlet extends HttpServlet{
+
+}

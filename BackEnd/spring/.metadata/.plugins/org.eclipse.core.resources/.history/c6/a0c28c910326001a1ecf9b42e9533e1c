@@ -1,0 +1,37 @@
+package com.cpg.empspringmvc.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cpg.empspringmvc.bean.EmployeeBean;
+import com.cpg.empspringmvc.dao.EmployeeDao;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeServices{
+
+	@Autowired
+	private EmployeeDao dao;
+	
+	@Override
+	public EmployeeBean auth(String email, String password) {
+		return null;
+	}
+
+	@Override
+	public boolean register(EmployeeBean bean) {
+		return false;
+	}
+
+	@Override
+	public List<EmployeeBean> getEmployees(String Key) {
+		return null;
+	}
+
+	@Override
+	public boolean changePassword(int id, String password) {
+		return false;
+	}
+
+}

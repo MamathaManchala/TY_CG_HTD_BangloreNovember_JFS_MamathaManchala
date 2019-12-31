@@ -1,0 +1,56 @@
+package com.capgemini.mywebapp.servelets;
+
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.capgemini.mywebapp.bean.EmployeeInfoBean;
+import com.capgemini.mywebapp.services.EmployeeService;
+import com.capgemini.mywebapp.services.EmployeeServiceImpl;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+
+	private EmployeeService service = new EmployeeServiceImpl();
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException{
+		//Get the Form data
+		
+		String empIdVal = req.getParameter("empId");
+		String password = req.getParameter("password");
+		
+		int empId =Integer.parseInt(empIdVal);
+		
+		EmployeeInfoBean employeeInfoBean = service.authenticate(empId, password);
+		PrintWriter out = resp.getWriter();
+		out.print("<html>");
+		out.print("<body>");
+		if( employeeInfoBean !=null) {
+			//Valid credentials
+			HttpSession session = req.getSession(true);
+			session.setAttribute("employeeInfoBean", employeeInfoBean);
+			out.print("<h2 style='color' : blue'>Welcome "+employeeInfoBean.getName()+"!</h2>");
+			out.print("<br><a herf='#'>Add Employee</a>");
+			out.print("<br><a herf='#'>Update Employee</a>");
+			out.print("<br><a herf='#'>Search Employee</a>");
+			out.print("<br><a herf='#'>Delete Employee</a>");
+			out.print("<br><a herf='#'>See All Employee</a>");
+			out.print("<br><br><a herf='#'>Logout</a>");
+		}else {
+			//Invalid credentials
+			out.print("<h3> style='color : red'> Invalid Credentials</h3>");
+			req.getRequestDispatcher("./loginPage.html").include(req, resp);
+		}
+		out.println("</html>");
+		out.println("</body>");
+	}
+	
+	
+	
+}
