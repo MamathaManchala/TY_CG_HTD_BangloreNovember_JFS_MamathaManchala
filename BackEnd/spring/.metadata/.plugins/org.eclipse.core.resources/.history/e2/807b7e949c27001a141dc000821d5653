@@ -1,6 +1,0 @@
-package com.cpg.springrest.dto;
-
-public class Snippet {
-		<context:component-scan base-
-}
-

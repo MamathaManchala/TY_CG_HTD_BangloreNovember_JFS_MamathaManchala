@@ -1,5 +1,0 @@
-package com.capgemini.empspringboot.service;
-
-public class EmployeeServiceImpl {
-
-}

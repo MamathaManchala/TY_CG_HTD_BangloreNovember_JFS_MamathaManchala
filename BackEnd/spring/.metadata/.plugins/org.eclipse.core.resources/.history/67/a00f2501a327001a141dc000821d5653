@@ -1,5 +1,0 @@
-package com.cpg.springrest.controller;
-
-public class EmployeeController {
-
-}
