@@ -1,0 +1,38 @@
+<div class="container mt-3">
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Image URL</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+    <tr *ngFor='let product of products; index as i'appColor
+    
+    [ngClass]='{
+        
+        "list-group-item-danger": product.price < "3000",
+        "list-group-item-primary": product.price >= "3000"
+    }'
+    
+    
+    >
+    <td>{{i+1}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.image}}</td>
+    <td>{{product.price}}</td>
+    
+    </tr>
+    <button class="btn btn-outline-primary float-right"
+      (click)='deleteProduct(Product)'>Delete</button>
+        </tbody>
+    </table>
+
+</div>
+
+<!-- <div appColor>
+    
+</div> -->

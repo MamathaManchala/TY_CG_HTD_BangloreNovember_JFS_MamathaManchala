@@ -1,0 +1,40 @@
+
+<!-- //Interpolation -->
+
+<h1>name</h1>
+<h1>{{name}}</h1>
+<h1>{{10+100}}</h1>
+<h1>10+100</h1>
+
+<!-- //property Binding -->
+
+<img [src]="imgURL" alt="" width="200px" height="200px">
+<!-- <img [src]={{imgURL}} alt=""> -->
+
+<!-- //Style Binding -->
+
+<br>
+<br>
+<br>
+
+<p [style.background]='flag ? "green" : "red"'
+[style.color]='flag ? "red" : "green"'
+[style.fontsize]='flag ? "20px" : "50px" '>   Style Binding  </p>
+
+<!-- <p class.blind="flag" [class.not-blind]="!flag">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Beatae magnam sed ad saepe in! Quas iure eius ullam quae soluta quos consequatur cum deserunt mollitia.
+     At repellendus distinctio placeat. Saepe.
+</p> -->
+
+<!-- <input type="text" name="myInput" #myInput>
+{{myInput.value}} -->
+
+<input type="text" name="twoWayData" [(ngModel)]='twoWayData'>
+
+{{twoWayData}}
+
+<!-- <button (click)='clickMe(myInput)' class="btn btn-outline-dark">Click me</button> -->
+
+<button (click)='printData()' class="btn btn-outline-dark">Click me</button>
+

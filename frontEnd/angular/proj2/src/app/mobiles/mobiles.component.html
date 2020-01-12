@@ -1,0 +1,14 @@
+<div class="col-md-3 float-left">
+    <div class="card card-body" *ngFor='let mobile of mobiles'>
+    
+    <img src="{{mobile.imgURL}}" alt="" height="200px"
+    (click)='selectmobile(mobile)'>
+    
+    <div class="text-center">{{mobile.name}}</div>
+    
+    </div>
+    
+    </div>
+    
+    <app-mobile-details [bikeDetails]='selectedmobile'></app-mobile-details>
+    

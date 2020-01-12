@@ -1,0 +1,20 @@
+
+
+nav{
+    background-color:black;
+    font-size: medium;
+   
+}
+nav ul{
+    margin: 0;
+}
+
+nav ul li{
+    /* float: left; */
+    padding: 20px;
+    display: inline-block;
+    
+}
+nav ul li a {
+    text-decoration: none;
+}

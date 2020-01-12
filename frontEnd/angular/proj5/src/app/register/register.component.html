@@ -1,0 +1,58 @@
+
+<div class="alert alert-success" *ngIf='message'>
+    {{message}}
+</div>
+<div class="alert alert-danger" *ngIf='error'>
+    {{error}}
+</div>
+
+<div class="col-md-4 offset-4 mt-4">
+    <form #registrationForm='ngForm' (ngSubmit)='register(registrationForm)'>
+        <div class="card">
+            <div class="card-header">
+                Please Register Here!!
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" #name='ngModel' ngModel>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email" id="email" #email='ngModel' ngModel>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="phone" #phone='ngModel' ngModel>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" #gender='ngModel' ngModel class="form-control" >
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" class="form-control" name="password" id="password" #password='ngModel' ngModel>
+        </div>
+
+        <div class="form-group">
+            <label for="role">Role</label>
+            <select name="role" id="role" #role='ngModel' ngModel class="form-control" >
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-outline-dark float-right">Register</button>
+    
+    </form>
+</div>

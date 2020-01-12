@@ -1,0 +1,28 @@
+<h2>{{date | date : 'yyyy-MM-dd' | uppercase}}</h2>
+<div class="alert alert-danger" *ngIf='message'>{{message}}</div>
+<span class="float-right">
+    <button (click)='deleteMessage()'>&times;</button>
+</span>
+
+<div class="col-md-3 float-left mt-3" *ngFor='let product of products'>
+    <div class="card">
+        <div class="card-header">
+            {{product.name | titlecase | cutString : 3}}
+        </div>
+        <div class="card-body">
+            <img [src]="product.url" alt="product image" height="200px" width="100%">
+           
+            <p>RS:{{product.cost | currency : 'INR'}}</p>
+        </div>
+        <div class="card-footer">
+            <div class="btn-group col-md-12">
+                <button class="btn btn-outline-success" (click)='selectProduct(product)'>
+                    Update
+                </button>
+                <button class="btn btn-outline-dark" (click)='deleteProduct(product)'>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

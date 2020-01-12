@@ -1,0 +1,13 @@
+.blind{
+    background: rebeccapurple;
+    color: rosybrown;
+    padding: 20px;
+    font-size: 30px;
+}
+.not-blind{
+    background: grey;
+    color: rebeccapurple;
+    padding: 20px;
+    font-size: 40px;
+
+}

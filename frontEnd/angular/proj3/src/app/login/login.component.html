@@ -1,0 +1,93 @@
+<div class="col-md-4 offset-md-4">
+
+    <form #loginForm='ngForm' (ngSubmit)='submitForm(loginForm)'>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" minlength="8" required #email='ngModel' ngModel
+                class="form-control" email>
+
+            <div *ngIf='email.touched && email.invalid'>
+                <div class="alert alert-danger" *ngIf='email.errors.required'>
+                    This field is mandtory
+                </div>
+                <div class="alert alert-danger" *ngIf='email.errors.minlength'>
+                    Minimun 8 Characters are required
+                </div>
+                <div class="alert alert-danger" *ngIf='email.errors.email'>
+                    This field only accepts email
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" #password='ngModel' ngModel class="form-control"
+                required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$">
+            <div *ngIf='password.invalid && password.touched'>
+                <div class="alert alert-danger" *ngIf='password.errors.required'>
+                    This field is mandatory
+                </div>
+                <div class="alert alert-danger" *ngIf='password.errors.pattern'>
+                    Password must be at least 4 characters,
+                    no more than 8 characters, and must include
+                    at least one upper case letter,
+                    one lower case letter, and one numeric digit
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" name="phone" pattern="[0-9]{10}" #phone='ngModel' ngModel required class="form-control">
+            <div *ngIf='phone.invalid && phone.touched'>
+                <div class="alert alert-danger" *ngIf='phone.errors.required'>
+                    This field is mandatory
+                </div>
+                <div class="alert alert-danger" *ngIf='phone.errors.pattern'>
+                    Takes only Phone Number
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required min="{{todaysDate | date: 'yyyy-MM-dd'}}"
+                class="form-control">
+        </div>
+
+
+
+
+
+
+<!-- <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" #phone='ngModel' ngModel class="form-control"
+            required pattern="[0-9]{10}">
+        <div *ngIf='date.invalid && date.touched'>
+        <div class="alert alert-danger" *ngIf='date.errors.required'>
+            This field is mandatory
+        </div>
+        <div class="alert alert-danger" *ngIf='date.errors.pattern'>
+            Takes only Date
+
+        </div>
+    </div>
+
+</div> -->
+
+<button type="submit" class="btn-btn-primary float-right" [disabled]='loginForm.invalid'>
+    Login</button>
+
+</form>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="col-md-4 offset-md-4 mt-4">
+    <form #addProductForm='ngForm' (ngSubmit)='addProduct(addProductForm)'>
+
+        <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" name="name" id="productName" #name='ngModel' ngModel class="form-control" required>
+        </div>
+        <div clas="form-group">
+            <label for="productUrl">Product Image</label>
+            <input type="text" name="url" id="productUrl" #url='ngModel' ngModel required class="form-control">
+        </div>
+        <div clas="form-group">
+            <label for="productCost">Product Cost</label>
+            <input type="text" name="cost" id="productCost" #url='ngModel' ngModel required pattern="[0-9]{10}"
+                class="form-control">
+        </div>
+        <button type="submit" class="btn btn-outline-primary float-right">Add Product</button>
+    </form>
+</div>
