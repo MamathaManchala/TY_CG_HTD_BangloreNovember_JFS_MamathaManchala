@@ -1,5 +1,0 @@
-package com.capgemini.springcore.config;
-
-public class BeansConfig {
-
-}

@@ -1,5 +1,0 @@
-package com.cpg.springrest.dao;
-
-public class EmployeeResponce {
-
-}
