@@ -1,0 +1,46 @@
+<div class="col-md-4 offset-md-4">
+    <form #AddPostForm='ngForm'>
+        <div class="form-group">
+            <label for="userid">UserId</label>
+            <input type="userid" name="userid" id="userid" minlength="8" required #email='ngModel' ngModel
+                class="form-control" userid>
+            <div *ngIf='userid.touched && userid.invalid'>
+                <div class="alert alert-danger" *ngIf='userid.errors.required'>
+                    This field is mandatory
+                </div>
+                <div class="alert alert-danger" *ngIf='userid.errors.minlength'>
+                    Minimum 8 characters are required
+                </div>
+                <div class="alert alert-danger" *ngIf='userid.errors.userid'>
+                    This field only accepts userid
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="id">id</label>
+            <input type="id" name="id" id="id" #id='ngModel' ngModel class="form-control"
+                required>
+            <div *ngIf='id.invalid && id.touched'>
+                <div class="alert alert-danger" *ngIf='id.errors.required'>
+                    This field is mandatory
+                </div>
+           </div>
+         </div>
+         <div class="form-group">
+            <label for="title">title</label>
+            <input type="title" name="title" id="title" #title='ngModel' ngModel class="form-control"
+                required>
+            <div *ngIf='title.invalid && title.touched'>
+                <div class="alert alert-danger" *ngIf='title.errors.required'>
+                    This field is mandatory
+                </div>
+           </div>
+         </div>
+            
+            
+            <button type="submit" (ngSubmit)='submitForm(addPostForm)' class="btn btn-primary float-right"
+                [disabled]='loginForm.invalid'>
+                Add Post
+            </button>
+    </form>
+</div>

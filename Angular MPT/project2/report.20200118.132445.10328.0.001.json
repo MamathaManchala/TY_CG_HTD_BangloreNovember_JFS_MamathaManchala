@@ -1,0 +1,439 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200118.132445.10328.0.001.json",
+    "dumpEventTime": "2020-01-18T13:24:53Z",
+    "dumpEventTimeStamp": "1579334093895",
+    "processId": 10328,
+    "cwd": "C:\\Users\\yasas\\OneDrive\\Desktop\\mpt2",
+    "commandLine": [
+      "node",
+      "C:\\Users\\yasas\\AppData\\Roaming\\npm\\\\node_modules\\@angular\\cli\\bin\\ng",
+      "serve"
+    ],
+    "nodejsVersion": "v12.14.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.14.0",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.14.0/node-v12.14.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.14.0/node-v12.14.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.14.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18362",
+    "osVersion": "Windows 10 Home Single Language",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 8280687,
+        "nice": 0,
+        "sys": 8061953,
+        "idle": 87209890,
+        "irq": 1420312
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 7098359,
+        "nice": 0,
+        "sys": 3398171,
+        "idle": 93055500,
+        "irq": 271406
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 9781062,
+        "nice": 0,
+        "sys": 5565375,
+        "idle": 88205593,
+        "irq": 217140
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 8115125,
+        "nice": 0,
+        "sys": 2654203,
+        "idle": 92782687,
+        "irq": 70812
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 18575921,
+        "nice": 0,
+        "sys": 6480437,
+        "idle": 78495671,
+        "irq": 641562
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 17187687,
+        "nice": 0,
+        "sys": 5407984,
+        "idle": 80956343,
+        "irq": 188531
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 22720406,
+        "nice": 0,
+        "sys": 5738500,
+        "idle": 75093078,
+        "irq": 299453
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 19025968,
+        "nice": 0,
+        "sys": 3813968,
+        "idle": 80712078,
+        "irq": 113437
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "c0:b5:d7:4b:5e:9d",
+        "address": "2409:4071:2095:b1de:49da:f6f5:1582:b7cb",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "c0:b5:d7:4b:5e:9d",
+        "address": "2409:4071:2095:b1de:84fb:800d:7a23:977",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "c0:b5:d7:4b:5e:9d",
+        "address": "fe80::49da:f6f5:1582:b7cb",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 18
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "c0:b5:d7:4b:5e:9d",
+        "address": "192.168.43.246",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "LAPTOP-EFBQS8G6"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff697f11729",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff697f15b4c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28316"
+    },
+    {
+      "pc": "0x00007ff697f14b08",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24152"
+    },
+    {
+      "pc": "0x00007ff69800369b",
+      "symbol": "v8::base::CPU::has_sse+37723"
+    },
+    {
+      "pc": "0x00007ff6988082de",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff6987f0321",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff6986bdbec",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff6986c5cf1",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3761"
+    },
+    {
+      "pc": "0x00007ff6986bb353",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff6986b9b24",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2356"
+    },
+    {
+      "pc": "0x00007ff6986dadf5",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff698446e19",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+4057"
+    },
+    {
+      "pc": "0x00007ff698c3404d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+567949"
+    },
+    {
+      "pc": "0x00007ff698c9a057",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+985751"
+    },
+    {
+      "pc": "0x00007ff698bb3bdc",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42524"
+    },
+    {
+      "pc": "0x00007ff698bb3bdc",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42524"
+    },
+    {
+      "pc": "0x00000170f643329f",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 246255616,
+    "totalCommittedMemory": 246255616,
+    "usedMemory": 229271936,
+    "availableMemory": 1968800224,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047488,
+        "used": 1047464,
+        "available": 24
+      },
+      "old_space": {
+        "memorySize": 164474880,
+        "committedMemory": 164474880,
+        "capacity": 164187064,
+        "used": 152770216,
+        "available": 11416848
+      },
+      "code_space": {
+        "memorySize": 3309568,
+        "committedMemory": 3309568,
+        "capacity": 3061504,
+        "used": 2487584,
+        "available": 573920
+      },
+      "map_space": {
+        "memorySize": 7081984,
+        "committedMemory": 7081984,
+        "capacity": 7074208,
+        "used": 3101520,
+        "available": 3972688
+      },
+      "large_object_space": {
+        "memorySize": 69455872,
+        "committedMemory": 69455872,
+        "capacity": 69282456,
+        "used": 69282456,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 550400,
+        "used": 550400,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047488,
+        "used": 0,
+        "available": 1047488
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 34.796,
+    "kernelCpuSeconds": 5.375,
+    "cpuConsumptionPercent": 2.13676,
+    "maxRss": 615157760,
+    "pageFaults": {
+      "IORequired": 503820,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 4951,
+      "writes": 30
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=::": "::\\",
+    "=C:": "C:\\Users\\yasas\\OneDrive\\Desktop\\mpt2",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\yasas\\AppData\\Roaming",
+    "CATALINA_HOME": "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "LAPTOP-EFBQS8G6",
+    "ComSpec": "C:\\windows\\system32\\cmd.exe",
+    "dp0": "C:\\Users\\yasas\\AppData\\Roaming\\npm\\",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\yasas",
+    "JAVA_HOME": "C:\\Program Files\\Java\\jdk1.8.0_231",
+    "LOCALAPPDATA": "C:\\Users\\yasas\\AppData\\Local",
+    "LOGONSERVER": "\\\\LAPTOP-EFBQS8G6",
+    "NUMBER_OF_PROCESSORS": "8",
+    "OneDrive": "C:\\Users\\yasas\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\yasas\\OneDrive",
+    "OnlineServices": "Online Services",
+    "OS": "Windows_NT",
+    "Path": "C:\\oracle\\product\\10.2.0\\db_1\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_231\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\yasas\\AppData\\Roaming;C:\\Program Files\\nodejs;C:\\Users\\yasas\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\yasas\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\yasas\\AppData\\Local\\Programs\\Fiddler;C:\\Users\\yasas\\AppData\\Roaming\\npm",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "PERL5LIB": "C:\\oracle\\product\\10.2.0\\db_1\\perl\\5.8.3\\lib\\MSWin32-x86;C:\\oracle\\product\\10.2.0\\db_1\\perl\\5.8.3\\lib;C:\\oracle\\product\\10.2.0\\db_1\\perl\\5.8.3\\lib\\MSWin32-x86;C:\\oracle\\product\\10.2.0\\db_1\\perl\\site\\5.8.3;C:\\oracle\\product\\10.2.0\\db_1\\perl\\site\\5.8.3\\lib;C:\\oracle\\product\\10.2.0\\db_1\\sysman\\admin\\scripts;",
+    "platformcode": "KV",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "8e0c",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "RegionCode": "APJ",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\windows",
+    "TEMP": "C:\\Users\\yasas\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\yasas\\AppData\\Local\\Temp",
+    "USERDOMAIN": "LAPTOP-EFBQS8G6",
+    "USERDOMAIN_ROAMINGPROFILE": "LAPTOP-EFBQS8G6",
+    "USERNAME": "yasas",
+    "USERPROFILE": "C:\\Users\\yasas",
+    "WEBPACK_DEV_SERVER": "true",
+    "windir": "C:\\windows",
+    "_prog": "node"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\windows\\SYSTEM32\\ntdll.dll",
+    "C:\\windows\\System32\\KERNEL32.DLL",
+    "C:\\windows\\System32\\KERNELBASE.dll",
+    "C:\\windows\\System32\\WS2_32.dll",
+    "C:\\windows\\System32\\RPCRT4.dll",
+    "C:\\windows\\System32\\ADVAPI32.dll",
+    "C:\\windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\windows\\System32\\msvcrt.dll",
+    "C:\\windows\\System32\\ucrtbase.dll",
+    "C:\\windows\\System32\\sechost.dll",
+    "C:\\windows\\System32\\USER32.dll",
+    "C:\\windows\\System32\\win32u.dll",
+    "C:\\windows\\System32\\GDI32.dll",
+    "C:\\windows\\System32\\gdi32full.dll",
+    "C:\\windows\\System32\\msvcp_win.dll",
+    "C:\\windows\\System32\\PSAPI.DLL",
+    "C:\\windows\\System32\\CRYPT32.dll",
+    "C:\\windows\\System32\\MSASN1.dll",
+    "C:\\windows\\System32\\bcrypt.dll",
+    "C:\\windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\windows\\SYSTEM32\\USERENV.dll",
+    "C:\\windows\\System32\\profapi.dll",
+    "C:\\windows\\SYSTEM32\\WINMM.dll",
+    "C:\\windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\windows\\System32\\cfgmgr32.dll",
+    "C:\\windows\\System32\\bcryptPrimitives.dll",
+    "C:\\windows\\System32\\IMM32.DLL",
+    "C:\\windows\\System32\\powrprof.dll",
+    "C:\\windows\\System32\\UMPDC.dll",
+    "C:\\windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\windows\\system32\\uxtheme.dll",
+    "C:\\windows\\System32\\combase.dll",
+    "C:\\windows\\system32\\mswsock.dll",
+    "C:\\windows\\System32\\kernel.appcore.dll",
+    "C:\\windows\\System32\\NSI.dll",
+    "C:\\windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\windows\\System32\\fwpuclnt.dll",
+    "C:\\windows\\system32\\napinsp.dll",
+    "C:\\windows\\system32\\pnrpnsp.dll",
+    "C:\\windows\\System32\\winrnr.dll",
+    "C:\\windows\\system32\\NLAapi.dll",
+    "C:\\windows\\system32\\wshbth.dll"
+  ]
+}
